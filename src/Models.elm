@@ -7,12 +7,6 @@ type alias Model =
     , route : Route
     }
 
-initialModel : Route -> Model
-initialModel route = 
-    { players = RemoteData.Loading
-    , route = route
-    }   
-
 type alias PlayerId =
     String
 
@@ -26,3 +20,9 @@ type Route
  = PlayersRoute
  | PlayerRoute PlayerId
  | NotFoundRoute
+
+initialModel : Route -> Model
+initialModel route = 
+    { players = RemoteData.Loading
+    , route = route
+    }   
